@@ -11,10 +11,10 @@ if(confirm("Quer iniciar uma nova rodada?")){
    let somaCartasComputador = (cartaUmComputador.valor + cartaDoisComputador.valor);
 
    console.log(`As cartas do usuário são: ${cartaUmUsuario.texto} e ${cartaDoisUsuario.texto}
-   Soma das cartas do usuário é: ${somaCartasUsuario}`);
+    pontuação: ${somaCartasUsuario}`);
 
    console.log(`As cartas do computador são: ${cartaUmComputador.texto} e ${cartaDoisComputador.texto}
-   Soma das cartas do usuário é: ${somaCartasComputador}`);
+    pontuação: ${somaCartasComputador}`);
    
    if (somaCartasUsuario > somaCartasComputador) {
       console.log("Usuario venceu!");
