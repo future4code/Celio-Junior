@@ -27,6 +27,16 @@ function retornaNumerosParesElevadosADois(array) {
 // EXERCÍCIO 03
 function retornaNumerosPares(array) {
   
+  let numerosPares = [];
+  
+  for (let indice = 0; indice < array.length; indice++) {
+    if (array[indice] % 2 === 0){
+        numerosPares.push(array[indice]);
+    }
+  }
+  
+  return numerosPares
+
 }
 
 // EXERCÍCIO 04
