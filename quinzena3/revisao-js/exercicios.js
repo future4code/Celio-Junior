@@ -12,7 +12,16 @@ function inverteArray(array) {
 
 // EXERCÍCIO 02
 function retornaNumerosParesElevadosADois(array) {
+
+  let numerosPares = [];
   
+  for (let indice = 0; indice < array.length; indice++) {
+    if (array[indice] % 2 === 0){
+        numerosPares.push(array[indice]**2);
+    }
+  }
+  
+  return numerosPares
 }
 
 // EXERCÍCIO 03
