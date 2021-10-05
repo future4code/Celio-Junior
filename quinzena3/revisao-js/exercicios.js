@@ -42,7 +42,7 @@ function retornaNumerosPares(array) {
 // EXERCÍCIO 04
 function retornaMaiorNumero(array) {
 
-  let maiorNumero = -Infinity;
+  let maiorNumero = array[0];
 
   for (let numeroDaVez of array) {
     if (numeroDaVez > maiorNumero) {
@@ -56,16 +56,33 @@ function retornaMaiorNumero(array) {
 
 // EXERCÍCIO 05
 function retornaQuantidadeElementos(array) {
+  
   return array.length
 }
 
 // EXERCÍCIO 06
 function retornaExpressoesBooleanas() {
   
+  const booleano1 = true
+  const booleano2 = false
+  const booleano3 = !booleano2 
+  const booleano4 = !booleano3
+  
+  const arrayResposta = [
+    booleano1 && booleano2 && !booleano4,
+    (booleano1 && booleano2) || !booleano3,
+    (booleano2 || booleano3) && (booleano4 || booleano1),
+    !(booleano2 && booleano3) || !(booleano1 && booleano3),
+    !(booleano1) && !(booleano3) || (!booleano4 && booleano3 && booleano3)
+  ]
+
+  return arrayResposta
+
 }
 
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
+  
 
 }
 
