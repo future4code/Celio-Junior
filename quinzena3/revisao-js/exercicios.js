@@ -42,6 +42,16 @@ function retornaNumerosPares(array) {
 // EXERCÍCIO 04
 function retornaMaiorNumero(array) {
 
+  let maiorNumero = -Infinity;
+
+  for (let numeroDaVez of array) {
+    if (numeroDaVez > maiorNumero) {
+      maiorNumero = numeroDaVez;
+    }
+  }
+
+  return maiorNumero;
+  
 } 
 
 // EXERCÍCIO 05
