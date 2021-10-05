@@ -3,8 +3,8 @@ function inverteArray(array) {
     
   let arrayInvertido = []
 
-  for (let indice = array.length -1; indice >= 0; indice--) {
-    arrayInvertido.push(array[indice])
+  for (let i = array.length -1; i >= 0; i--) {
+    arrayInvertido.push(array[i])
   }
     
   return arrayInvertido
@@ -15,9 +15,9 @@ function retornaNumerosParesElevadosADois(array) {
 
   let numerosPares = [];
   
-  for (let indice = 0; indice < array.length; indice++) {
-    if (array[indice] % 2 === 0){
-        numerosPares.push(array[indice]**2);
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0){
+        numerosPares.push(array[i]**2);
     }
   }
   
@@ -29,9 +29,9 @@ function retornaNumerosPares(array) {
   
   let numerosPares = [];
   
-  for (let indice = 0; indice < array.length; indice++) {
-    if (array[indice] % 2 === 0){
-        numerosPares.push(array[indice]);
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0){
+        numerosPares.push(array[i]);
     }
   }
   
@@ -56,12 +56,12 @@ function retornaMaiorNumero(array) {
 
 // EXERCÍCIO 05
 function retornaQuantidadeElementos(array) {
-  
+  return array.length
 }
 
 // EXERCÍCIO 06
 function retornaExpressoesBooleanas() {
-
+  
 }
 
 // EXERCÍCIO 07
