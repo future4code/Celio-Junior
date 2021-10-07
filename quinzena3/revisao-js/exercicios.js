@@ -94,9 +94,19 @@ function retornaNNumerosPares(n) {
 
 // EXERCÍCIO 08
 function checaTriangulo(a, b, c) {
-  // return 'Escaleno'
-  // return 'Equilátero'
-  // return 'Isósceles'
+  if (a === b & b === c){
+    return 'Equilátero'
+  }
+
+  if (a === b || a === c || b === c) {
+    return 'Isósceles'
+  } else {
+    
+    return 'Escaleno'
+  }
+  
+  return checaTriangulo
+
 }
 
 // EXERCÍCIO 09
