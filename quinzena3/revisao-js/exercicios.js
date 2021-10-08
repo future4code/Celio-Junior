@@ -111,12 +111,31 @@ function checaTriangulo(a, b, c) {
 
 // EXERCÍCIO 09
 function comparaDoisNumeros(num1, num2) {
-  // Formato do objeto a ser retornado:
-  // {
-  //   maiorNumero: X,
-  //   maiorDivisivelPorMenor: Y,
-  //   diferenca: Z
-  // }
+  let maior
+  let menor
+
+  if (num1 > num2) {
+    maior = num1
+    menor = num2
+
+  } else {
+    menor = num1
+    maior = num2
+  }
+
+  let divisivel = (maior % menor) === 0
+
+  let valorDiferenca = (maior - menor)
+
+  let objeto =
+  {
+    maiorNumero: maior,
+    maiorDivisivelPorMenor: divisivel,
+    diferenca: valorDiferenca
+
+  }
+  return objeto
+
 }
 
 // EXERCÍCIO 10
@@ -126,12 +145,29 @@ function segundoMaiorEMenor(array) {
 
 // EXERCÍCIO 11
 function ordenaArray(array) {
+  const novaArray = []
 
+  for (item of array) {
+    let contador = 0
+    for (itemComparado of array) {
+      if (item > itemComparado) {
+        contador = contador + 1
+      }
+    }
+    novaArray[contador] = item
+  }
+  return novaArray
 }
 
 // EXERCÍCIO 12
 function filmeFavorito() {
-
+  let objeto = {
+    nome: "O Diabo Veste Prada",
+    ano: 2006,
+    diretor: "David Frankel",
+    atores: ["Meryl Streep", "Anne Hathaway", "Emily Blunt", "Stanley Tucci"]
+  }
+  return objeto
 }
 
 // EXERCÍCIO 13
