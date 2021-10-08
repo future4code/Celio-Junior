@@ -140,12 +140,28 @@ function comparaDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 10
 function segundoMaiorEMenor(array) {
+  let novaArray = []
+
+  for (item of array) {
+    let contador = 0
+    for (itemComparado of array) {
+      if (item > itemComparado) {
+        contador = contador + 1
+      }
+    }
+    novaArray[contador] = item
+  }
+
+  let segundoMaiorNumero = novaArray[novaArray.length - 2] 
+  let segundoMenorNumero = novaArray[1]
+
+  return [segundoMaiorNumero, segundoMenorNumero]
 
 }
 
 // EXERCÍCIO 11
 function ordenaArray(array) {
-  const novaArray = []
+  let novaArray = []
 
   for (item of array) {
     let contador = 0
@@ -161,18 +177,25 @@ function ordenaArray(array) {
 
 // EXERCÍCIO 12
 function filmeFavorito() {
-  let objeto = {
+  let filme = {
     nome: "O Diabo Veste Prada",
     ano: 2006,
     diretor: "David Frankel",
     atores: ["Meryl Streep", "Anne Hathaway", "Emily Blunt", "Stanley Tucci"]
   }
-  return objeto
+  return filme
 }
 
 // EXERCÍCIO 13
-function imprimeChamada() {
-  // "Venha assistir ao filme NOME_DO_FILME, de ANO, dirigido por DIRECAO e estrelado por ELENCO."
+function imprimeChamada(filme) {
+  // let filme = {
+  //   nome: "O Diabo Veste Prada",
+  //   ano: 2006,
+  //   diretor: "David Frankel",
+  //   atores: ["Meryl Streep", "Anne Hathaway", "Emily Blunt", "Stanley Tucci"]
+  // }
+  
+  // return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores}.`
 }
 
 // EXERCÍCIO 14
