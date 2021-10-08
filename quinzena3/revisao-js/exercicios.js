@@ -187,25 +187,36 @@ function filmeFavorito() {
 }
 
 // EXERCÍCIO 13
-function imprimeChamada(filme) {
-  // let filme = {
-  //   nome: "O Diabo Veste Prada",
-  //   ano: 2006,
-  //   diretor: "David Frankel",
-  //   atores: ["Meryl Streep", "Anne Hathaway", "Emily Blunt", "Stanley Tucci"]
-  // }
+function imprimeChamada() {
+  let filme = {
+    nome: "O Diabo Veste Prada",
+    ano: 2006,
+    diretor: "David Frankel",
+    atores: ["Meryl Streep", " Anne Hathaway", " Emily Blunt", " Stanley Tucci"]
+  }
   
-  // return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores}.`
+  return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores}.`
 }
 
 // EXERCÍCIO 14
 function criaRetangulo(lado1, lado2) {
-
+  // const retangulo = {
+  //   largura: lado1,
+  //   altura: lado2,
+  //   perimetro: (2 * (lado1 + lado2)),
+  //   area: (lado1 * lado2)
+  // }
+  
+  // return retangulo  
 }
 
 // EXERCÍCIO 15
 function anonimizaPessoa(pessoa) {
-
+  // const novaPessoa = {
+  //   ...pessoa,
+  //   nome: "ANÔNIMO"
+  // }
+  // return novaPessoa
 }
 
 // EXERCÍCIO 16A
