@@ -239,7 +239,11 @@ return menoresDeIdade
 
 // EXERCÍCIO 17A
 function multiplicaArrayPor2(array) {
+  const multiplicadosPor2 = array.map((numeros) => {
+    return numeros * 2
+  })
 
+  return multiplicadosPor2
 }
 
 // EXERCÍCIO 17B
