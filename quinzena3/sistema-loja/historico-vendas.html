@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <title>Funcionários</title>
+    <title>Histórico de vendas</title>
 </head>
 <body>
     <header>
@@ -29,21 +29,56 @@
         </div>
     </header>
 
-    <br><br>
+        <br>
 
     <main>
-        <h2 class="align">Funcionários</h2>
-        <!-- Crie uma lista de funcionários usando as tags que você aprendeu hoje abaixo \/ -->
-        <div>
-            <ul>
-                <li>Leonardo</li>
-                <li>Lucas</li>
-                <li>Henrique</li>
-                <li>Pedro</li>
-                <li>Matheus</li>
-            </ul>
+        <h2 class="align">Histórico de vendas</h2> 
+    
+        <table class="tam-tab">
+
+            <tr align="center"  >
+                <td> Horário: 19:00</td>
+                <td> Funcionário: Lucas </td>
+                <td> Valor Total: R$ 600,00 </td>
+                <td> Pagamento: Dinheiro</td>
+            </tr>
+
+            <tr align="center"  >
+                <td> Horário: 15:00</td>
+                <td> Funcionário: Leonardo </td>
+                <td> Valor Total: R$ 1.000,00 </td>
+                <td> Pagamento: Cartão de Crédito</td>
+            </tr>
+
+            <tr align="center"  >
+                <td> Horário: 13:00</td>
+                <td> Funcionário: Henrique </td>
+                <td> Valor Total: R$ 500,00 </td>
+                <td> Pagamento: Cartão de Débito</td>
+            </tr>
+
+            <tr align="center"  >
+                <td> Horário: 12:00</td>
+                <td> Funcionário: Pedro </td>
+                <td> Valor Total: R$ 700,00 </td>
+                <td> Pagamento: Cartão de Crédito</td>
+            </tr>
+
+            <tr align="center"  >
+                <td> Horário: 17:00</td>
+                <td> Funcionário: Matheus </td>
+                <td> Valor Total: R$ 200,00 </td>
+                <td> Pagamento: Dinheiro</td>
+            </tr>
+        </table><br>
+
+        <div align="center">
+            <label>Data da compra: <input type="text" id="lblDataExtenso" placeholder="Ex: 17 de Outubro de 2021"></label>
+            <button class="style-button" type="submit">Pesquisar</button>
         </div>
-    </main> <br><br><br><br>
+    </main> <br><br>
+
+
 
     <footer>
         <div>
@@ -56,6 +91,6 @@
             </div>
         </div>
     </footer>
-        
+
 </body>
 </html>

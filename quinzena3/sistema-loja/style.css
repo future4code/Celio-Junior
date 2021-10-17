@@ -20,6 +20,10 @@ table {
     margin-left: auto;
 }
 
+input {
+    border-radius: 80px;
+}
+
 footer {
     text-align: center;
     color: black;
@@ -36,9 +40,15 @@ ul {
     padding-left: 47.5%;
     list-style-type: none;
     color: black;
+    background-color: linen;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 2%;    
+
 }
 
-.alinhando, .form-add {
+
+.align {
     text-align: center;
     text-decoration: none;
     color: black;
@@ -57,3 +67,33 @@ ul {
     padding: 10%;
     background-color: grey;
 }
+
+.tam-tab {
+    margin-right: 100px;
+    margin-left: 100px;
+    padding-right: 50px;
+    padding-left: 50px;
+
+}
+
+.align-form {
+    width: 100px;
+}
+
+.form-add {
+    text-align: center;
+}
+
+
+.style-button {
+    font-size: 14px;
+    background: white;
+    border: 3px solid black;
+    border-radius: 80px;
+    box-shadow: 2px 2px 2px black;
+    width: fit-content;
+    margin: 7px;
+    padding: 5px;
+
+}
+

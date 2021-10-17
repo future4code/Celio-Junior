@@ -8,52 +8,57 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <title class="alinhando">Adicionar Produto</title>
+    <title>Adicionar Produto</title>
 </head>
 <body>
     <header>
-        <div class="alinhando">
-            <h1>Loja do DEFAULTAO</h1> <br>
+        <div class="align">
+            <h1>Loja do DEFAULTAO</h1>
+            <p> <bold><i><u>Os itens mais raros do nosso querido FortNelson você encontra aqui!</u></i></bold></p>
         </div>
+
+        <br>
     
-        <div class="alinhando bgmenu">
+        <div class="align bgmenu">
             <a href="index.html">Página Inicial</a>
             <a href="ctrl-estoque.html">Controle de Estoque</a>
             <a href="add-produto.html">Adicionar Produto</a>
             <a href="funcionarios.html">Funcionários</a>
+            <a href="pagina-vendas.html">Página de vendas</a>
+            <a href="historico-vendas.html">Histórico de vendas</a>
         </div>
     </header>
 
     <main>
-        <h2 class="alinhando">Adicionar Produto</h2>
+        <h2 class="align">Adicionar Produto</h2>
         
-        <form action="">
-            <div class="alinhando">
+        <form class="align" action="">
+            <div>
                 <label for="link-foto"> Link para foto: </label>
                 <input type="url" id="link-foto" name="link-foto">
             </div>
             
-            <div class="alinhando">
+            <div>
                 <label for="descricao"> Descrição do produto: </label>
                 <!-- Adicione o id apropriado para o input abaixo -->
                 <input type="text" id="descricao-prod" name="descrição">
             </div>
             
-            <div class="alinhando">
+            <div>
                 <label for="preco"> Preço (em R$): </label>
                 <!-- Adicione o id apropriado e o type para receber números abaixo -->
                 <input type="number" id="preco-prod" name="preço">
             </div>
             
-            <div class="alinhando">
+            <div>
                 <!-- Preencha as propriedades necessárias para os elementos abaixo -->
                 <label >Quantidade disponível: </label>
                 <input type="number" id="qtd-disp" name="quantidade">
-            </div>
+            </div> <br>
 
             <div class="form-add">
                 <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
-                <button type="submit">Adicionar</button>
+                <button class="style-button" type="submit">Adicionar</button>
             </div>
 
         </form>
