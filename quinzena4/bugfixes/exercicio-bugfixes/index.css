@@ -140,3 +140,9 @@ td button {
 #tamanho-imagem {
     width: 60px;
 }
+
+
+.estilizar-botao:hover {
+    background-color: rgb(153, 153, 28);
+}
+
