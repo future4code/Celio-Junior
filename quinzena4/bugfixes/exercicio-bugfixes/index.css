@@ -109,6 +109,8 @@ div:last-child {
 table {
     width: 60%;
     text-align: center;
+    margin-left: auto;
+	margin-right: auto;
 }
 
 td button {
@@ -142,6 +144,7 @@ td button {
 
 #tamanho-imagem {
     width: 60px;
+    background-color: transparent;
 }
 
 
@@ -149,3 +152,7 @@ td button {
     background-color: rgb(153, 153, 28);
 }
 
+
+.centraliza-botao {
+    text-align: center;
+}
