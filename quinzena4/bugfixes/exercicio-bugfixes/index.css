@@ -82,6 +82,8 @@ div img {
 
 #container-de-descricao>ol {
     padding: 15px 0px;
+    width: 300px;
+    margin: auto;
 }
 
 #container-para-comprar {
