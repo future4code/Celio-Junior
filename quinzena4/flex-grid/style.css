@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#page-grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 70px 1fr 70px;
+}
+
+.icones {
+    padding-top: 10px;
+    padding-left: 20px; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.container {
+    width: 20px;
+}
+
+p {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    padding-top: 15px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+header {
+    background-color: mediumvioletred;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px;
+    align-items: center;
+}
+
+
+main {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+nav {
+    background-color: #f2d0e0;
+}
+
+.produtos {
+    column-gap: 40px;
+    padding: 40px;
+    row-gap: 40px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+.produtos img{
+    width: 240px;
+}
+
+
+.bolos {
+    box-shadow: 1px 1px 2px 1px darkgray;
+    max-width: 240px;
+    text-align: center;
+}
+
+.bolos p{
+    width: 100px;
+}
+
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background-color: mediumvioletred;
+}
+
+button {
+    justify-self: end;
+    margin-right: 20px;
+    padding: 5px 20px
+}
