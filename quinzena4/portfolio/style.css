@@ -24,6 +24,63 @@ body {
     color: #aeaeae;
 }
 
+.nav {
+    display: flex;
+    background-color: gainsboro;
+    height: 80px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,.15);
+}
+
+.nav .menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav .menu .item {
+    position: relative;
+    padding: 0 10px;
+    width: 150px;
+    height: 100%;
+}
+
+
+.nav .menu .item:hover {
+    background-color: rgb(196, 196, 196);
+}
+
+.nav .menu .item .link{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 80px;
+    color: rgb(88, 88, 88);
+    text-transform: uppercase;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.nav .menu .item .link span {
+    position: absolute;
+    width: 100%;
+    bottom: 40%;
+    left: 0;
+    text-align: center;
+}
+
+.nav .menu .item .link .align {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+}
+
+
 .title {
     font-size: 36px;
     font-weight: normal;
@@ -32,17 +89,17 @@ body {
 
 .box {
     background: #eee;
-    padding: 4rem;
+    padding: 64px;
     box-shadow: 2px 2px 16px rgba(0,0,0,16);
     border-radius: 50px ;
     text-align: center;
-    margin-top: 8rem;
+    margin-top: 128px;
 }
 
 
 .profile-pic {
     border-radius: 50%;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 32px auto;
 }
 
 .profile span {
@@ -51,8 +108,8 @@ body {
 
 .profile p {
     font-size: 18px;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-top: 32px;
+    margin-bottom: 64px;
 }
 
 .redes-sociais {
@@ -65,7 +122,7 @@ body {
 }
 
 .redes-sociais li {
-    margin-right: 1rem;
+    margin-right: 16px;
 }
 
 .portfolio {
@@ -74,19 +131,19 @@ body {
 }
 
 .portfolio ul {
-    margin-top: 3rem;
+    margin-top: 48px;
 }
 
 .portfolio li {
     display: grid;
     grid-template-columns: auto 1fr;
     text-align: left;
-    gap: 1rem;
+    gap: 16px;
     color: #606060;
 }
 
 .portfolio li + li {
-    margin-top: 2rem;
+    margin-top: 32px;
 }
 
 .portfolio img {
@@ -95,12 +152,23 @@ body {
 
 .portfolio h2 {
     font-weight: normal;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+}
+
+.mytext {
+    height:100px;
+    width:200px;
 }
 
 .copyright {
     font-size: 24px;
     color: white;
     text-shadow: 2px 2px 16px black;
-    margin: 50vh 0;
+    margin: 10vh 0;
 }
+
