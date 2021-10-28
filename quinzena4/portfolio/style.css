@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    background: url("img/background.jpg") no-repeat top center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+    color: #aeaeae;
+}
+
+.nav {
+    display: flex;
+    background-color: gainsboro;
+    height: 80px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,.15);
+}
+
+.nav .menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav .menu .item {
+    position: relative;
+    padding: 0 10px;
+    width: 150px;
+    height: 100%;
+}
+
+
+.nav .menu .item:hover {
+    background-color: rgb(196, 196, 196);
+}
+
+.nav .menu .item .link{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 80px;
+    color: rgb(88, 88, 88);
+    text-transform: uppercase;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.nav .menu .item .link span {
+    position: absolute;
+    width: 100%;
+    bottom: 40%;
+    left: 0;
+    text-align: center;
+}
+
+.nav .menu .item .link .align {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+}
+
+
+.title {
+    font-size: 36px;
+    font-weight: normal;
+}
+
+
+.box {
+    background: #eee;
+    padding: 64px;
+    box-shadow: 2px 2px 16px rgba(0,0,0,16);
+    border-radius: 50px ;
+    text-align: center;
+    margin-top: 128px;
+}
+
+
+.profile-pic {
+    border-radius: 50%;
+    margin: 0 auto 32px auto;
+}
+
+.profile span {
+    font-size: 24px;
+}
+
+.profile p {
+    font-size: 18px;
+    margin-top: 32px;
+    margin-bottom: 64px;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+}
+
+.box span {
+    font-size: 24px;
+}
+
+.redes-sociais li {
+    margin-right: 16px;
+}
+
+.portfolio {
+    max-width: 886px;
+    box-sizing: border-box;
+}
+
+.portfolio ul {
+    margin-top: 48px;
+}
+
+.portfolio li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    text-align: left;
+    gap: 16px;
+    color: #606060;
+}
+
+.portfolio li + li {
+    margin-top: 32px;
+}
+
+.portfolio img {
+    border-radius: 10px;
+}
+
+.portfolio h2 {
+    font-weight: normal;
+    margin-bottom: 16px;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+}
+
+.mytext {
+    height:100px;
+    width:200px;
+}
+
+.copyright {
+    font-size: 24px;
+    color: white;
+    text-shadow: 2px 2px 16px black;
+    margin: 10vh 0;
+}
+
