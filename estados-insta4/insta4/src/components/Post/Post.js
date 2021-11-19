@@ -49,7 +49,19 @@ class Post extends React.Component {
   }
 
   onClickCurtida = () => {
-    console.log('Curtiu!')
+    let NovasCurtidas
+    
+    if (this.state.curtido) {
+      NovasCurtidas = this.state.numeroCurtidas - 1
+    } else {
+      NovasCurtidas = this.state.numeroCurtidas + 1
+    }
+
+    this.setState({
+      curtido: !this.state.curtido,
+      numeroCurtidas: NovasCurtidas
+    })
+  
   }
 
   onClickComentario = () => {
@@ -87,7 +99,7 @@ class Post extends React.Component {
       </PostHeader>
 
       <PostPhoto src={this.props.fotoPost} alt={'Imagem do post'}/>
-
+      
       <PostFooter>
         <IconeComContador
           icone={iconeCurtida}
