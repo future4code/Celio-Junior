@@ -1,21 +1,22 @@
 import React from "react";
 
 
-export default class Etapa1 extends React.Component {  
+export default class PrimeiraEtapa extends React.Component {  
 
 render (){
 
 return (
     <div className="Etapa1">
         <h1>ETAPA 1 - DADOS GERAIS</h1>
+        <p>
         <form >
-            <label>1. Qual o seu nome?</label> <br/>
-                <input type="text" name="nome"/> <br/>
-            <label>2. Qual sua idade?</label> <br/>
-                <input type="number" name="idade"/> <br/>
-            <label>2. Qual seu e-mail?</label> <br/>
-                <input type="text" name="email"/> <br/>
-            <label>4. Qual a sua escolaridade?</label> <br/>
+            <p><label>1. Qual o seu nome?</label></p>
+                <p><input type="text" name="nome"/></p>
+            <p><label>2. Qual sua idade?</label></p>
+                <p><input type="text" name="idade"/></p>
+            <p><label>2. Qual seu e-mail?</label></p>
+                <p><input type="text" name="email"/></p>
+            <p><label>4. Qual a sua escolaridade?</label></p>
             <select>
                 <option value="Ensino médio incompleto">Ensino médio incompleto</option>
                 <option value="Ensino médio completo">Ensino médio completo</option>
@@ -23,6 +24,7 @@ return (
                 <option value="Ensino superior completo">Ensino superior completo</option>
             </select>
         </form>
+        </p>
     </div>
   );
 }
