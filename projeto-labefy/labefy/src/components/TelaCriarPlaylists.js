@@ -2,6 +2,21 @@ import React from 'react';
 import axios from 'axios'
 import styled from 'styled-components'
 
+const Botao = styled.button`
+  border-radius: 300px;
+  color: #fff;
+  background-color: black;
+  margin: 5px;
+  `
+
+const Input = styled.input`
+  border-radius: 300px;
+`
+
+const Texto = styled.h3`
+  text-align: center;
+`
+
 class TelaCriarPlaylists extends React.Component {
 
   state = {
@@ -39,10 +54,10 @@ class TelaCriarPlaylists extends React.Component {
 
 
      <div>
-        <h3>Criar Playlist</h3>
+        <Texto>Criar Playlist</Texto>
         <div>
-            <input placeholder="Nome da Playlist" value={this.state.textoInput} onChange={this.mudaTextoInput} />
-            <button onClick={this.CriarPlaylist}>Criar</button>
+            <Input placeholder="Nome da Playlist" value={this.state.textoInput} onChange={this.mudaTextoInput} />
+            <Botao onClick={this.CriarPlaylist}>Criar</Botao>
         </div>
       </div>
   )}

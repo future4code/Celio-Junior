@@ -2,6 +2,23 @@ import React from 'react';
 import axios from 'axios'
 import styled from 'styled-components'
 
+const Botao = styled.button`
+  border-radius: 300px;
+  color: #fff;
+  background-color: black;
+  margin: 5px;
+  `
+
+const Input = styled.input`
+  border-radius: 300px;
+  margin: 5px;
+`
+
+const Texto = styled.h3`
+  text-align: center;
+`
+
+
 class AdicionaMusica extends React.Component {
 
     state = {
@@ -53,12 +70,12 @@ class AdicionaMusica extends React.Component {
     return (
 
     <div>
-        <h3>Adiciona Musica</h3>
+        <Texto>Adiciona Musica</Texto>
         <div>
-            <input placeholder="Nome da Música" value={this.state.nomeMusica} onChange={this.mudaMusicaInput} />
-            <input placeholder="Nome do Artista" value={this.state.nomeArtista} onChange={this.mudaArtistaInput} />
-            <input placeholder="Link" value={this.state.urlMusica} onChange={this.mudaUrlInput} />
-            <button onClick={this.adicionaMusica}>Adicionar</button>
+            <Input placeholder="Nome da Música" value={this.state.nomeMusica} onChange={this.mudaMusicaInput} />
+            <Input placeholder="Nome do Artista" value={this.state.nomeArtista} onChange={this.mudaArtistaInput} />
+            <Input placeholder="Link" value={this.state.urlMusica} onChange={this.mudaUrlInput} />
+            <Botao onClick={this.adicionaMusica}>Adicionar</Botao>
         </div>
       </div>)
 }

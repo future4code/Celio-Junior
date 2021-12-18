@@ -7,12 +7,19 @@ import AdicionaMusica from './components/AdicionaMusica';
 import styled from 'styled-components';
 
 const Container = styled.div`
-display: flex;
-justify-content: center; 
-align-items: center;
-flex-direction: column;
-background-color: gray;
-height: 100vh;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  background-color: #90ee90;
+  height: 100vh;
+`
+
+const Botao = styled.button`
+  border-radius: 300px;
+  color: #fff;
+  background-color: black;
+  margin: 5px;
 `
 
 class App extends React.Component {
@@ -54,7 +61,7 @@ class App extends React.Component {
       <Container>
         <TelaCriarPlaylists pegaPlaylists = {this.pegaPlaylists} />
         <br/><hr />
-        <br/><button onClick={this.mudaCondicionalDeLista}>Mostrar/Esconder Playlists</button>
+        <br/><Botao onClick={this.mudaCondicionalDeLista}>Mostrar/Esconder Playlists</Botao>
         {mostraLista}
       </Container>
 

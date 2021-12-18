@@ -5,10 +5,17 @@ import DetalhesPlay from './DetalhesPlay';
 import AdicionaMusica from './AdicionaMusica';
 
 
-const botao = styled.button`
+const Botao = styled.button`
   border-radius: 300px;
   color: #fff;
+  background-color: black;
+  margin: 5px;
 `
+
+const Texto = styled.h2`
+  text-align: center;
+`
+
 
 
 class TelaListaDePlaylists extends React.Component {
@@ -91,9 +98,10 @@ class TelaListaDePlaylists extends React.Component {
     }
 
         let playListsMap = this.props.playlists.map((playlist)=>{
-            return <p> <strong> Nome:</strong> {playlist.name} <button onClick={() => this.deletePlay(playlist.id)}>Apagar Playlist</button> 
-              <button onClick={() => this.getPlaylistinfo(playlist.id)}>Detalhes da Playlist</button> 
-              <button onClick={() => this.addMusica(playlist.id)}>Adicionar Música</button>
+            return <p> <strong> Nome:</strong> {playlist.name} 
+              <Botao onClick={() => this.deletePlay(playlist.id)}>Apagar Playlist</Botao> 
+              <Botao onClick={() => this.getPlaylistinfo(playlist.id)}>Detalhes da Playlist</Botao> 
+              <Botao onClick={() => this.addMusica(playlist.id)}>Adicionar Música</Botao>
              
                </p>
         })
@@ -101,7 +109,7 @@ class TelaListaDePlaylists extends React.Component {
         return(
 
             <div key={playListsMap.id}>
-                <h2>Quantidade de playlists: {playListsMap.length}</h2>
+                <Texto>Quantidade de playlists: {playListsMap.length}</Texto>
                  <p> {playListsMap} </p>
                  <div>{mostraLista}{mostraDetalhe}</div>
             </div>
