@@ -9,15 +9,14 @@ flex-direction: column;
 justify-content: center;
 width: 100%;
 
-hr{
+hr {
   width: 99.5%;
 }
 `
 
 const Astromatch = styled.img`
-width: 150px;
+width: 80px;
 `
-
 
 function Header() {
   return (
@@ -26,7 +25,7 @@ function Header() {
         <Astromatch src='/Imagens/astromatch.png'/>
       </div>
       
-      <hr/>
+      <hr size="1" />
     </Container>
   );
 }
