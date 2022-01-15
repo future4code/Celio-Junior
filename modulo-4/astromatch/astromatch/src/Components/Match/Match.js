@@ -11,8 +11,33 @@ const Container = styled.div`
   justify-content: center;
   border: 1px solid black;
   width: 150px;
-  height: 400%;
-  padding-top: -10px;
+  height: 900%;
+  
+`
+
+const HeaderContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+
+h2 {
+  display: inline-block;
+  font-weight: bold;
+  background: linear-gradient(to bottom, #FF5C00 57%, #000000 43%);
+  background-clip: text;
+  font-family: 'Source Code Pro', monospace;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 15px;
+}
+`
+const HeaderButton = styled.button`
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 20px;
+  border-radius: 50%;
 `
 
 const P = styled.p`
@@ -33,7 +58,7 @@ const DivImage = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  max-height: 150px;
+  max-height: 300px;
   margin: auto;
 `
 
@@ -52,17 +77,17 @@ const Button = styled.button`
 `
 
 
-function Match() {
+function Match(props) {
   const [person, setPerson] = useState({});
 
 
 const getPerson = async () => {
   await axios.get(
-   `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/celio-junior/person`
+   `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/junior/person`
   ).then((response) => {
       setPerson(response.data.profile)
   }).catch((error) => {
-      alert(error)
+      console.log(error)
   })
 };
 
@@ -77,13 +102,13 @@ const matchPerson = (choice) => {
   };
 
   axios.post(
-    `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/celio-junior/choose-person`, body
-  ).then((res) =>{
+    `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/junior/choose-person`, body
+  ).then(() =>{
       getPerson();
   })
   .catch ((error) =>{
       getPerson();
-      alert(error);
+      console.log(error);
   });
 };
 
@@ -91,7 +116,10 @@ const matchPerson = (choice) => {
 return (
   <Container>
       
-    <Header/>
+      <HeaderContainer>
+          <h2>ASTROMATCH</h2>
+          <HeaderButton onClick={props.goToMatchesList}> 👩‍❤️‍👨 </HeaderButton>
+      </HeaderContainer>
     
       <DivImage>
         <Image src={person.photo}/>
