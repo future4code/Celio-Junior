@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import Match from './Components/Match/Match';
-import Header from './Components/Header/Header';
 import MatchList from './Components/MatchList/MatchList';
 
 const Containers = styled.div`
@@ -9,7 +8,7 @@ const Containers = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin-top: 210px;
+  margin: 50px;
 `
 
 

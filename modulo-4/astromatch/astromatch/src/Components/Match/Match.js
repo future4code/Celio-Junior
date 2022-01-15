@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
-import Header from '../Header/Header'
 
 
 const Container = styled.div`
@@ -11,7 +10,7 @@ const Container = styled.div`
   justify-content: center;
   border: 1px solid black;
   width: 150px;
-  height: 900%;
+  height: 700%;
   
 `
 
