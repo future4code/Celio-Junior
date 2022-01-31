@@ -45,7 +45,7 @@ export const TripDetailsPage = () =>{
     const history = useHistory()
 
     const goToAdminHomePage = () => {
-        history.push("/adminhomepage")
+        history.push("/admin")
     }
 
     return (

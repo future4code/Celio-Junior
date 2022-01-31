@@ -44,11 +44,11 @@ export const HomePage = () => {
     const history = useHistory()
 
     const goToTripPages = () => {
-        history.push("/tripspage")
+        history.push("/trips")
     }
 
     const goToAdmPage = () => {
-        history.push("/loginpage")
+        history.push("/login")
     }
 
   return (

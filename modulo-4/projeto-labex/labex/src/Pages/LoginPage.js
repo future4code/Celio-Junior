@@ -80,7 +80,7 @@ export const LoginPage = () =>{
             ...form
         }).then(({ data }) => {
             localStorage.setItem("token", data.token);
-            history.push("/adminhomepage");
+            history.push("/admin");
         }).catch(res => console.log(res));
     }
 

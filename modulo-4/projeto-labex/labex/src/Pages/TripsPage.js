@@ -86,7 +86,7 @@ export const TripsPage = () => {
     }
 
     const goToApplicationForm = () => {
-        history.push("/applicationformpage")
+        history.push("/application")
     }
 
     const tripsList = trips.map((list)=>{

@@ -73,7 +73,7 @@ export const CreateTripPage = () =>{
     const history = useHistory()
     
     const AdminHomePage = () => {
-        history.push("/adminhomepage")
+        history.push("/admin")
     }
 
     const onSubmitCreateTrip = (event) => {
@@ -86,10 +86,13 @@ export const CreateTripPage = () =>{
             ...form
         }, {
             headers: {
-                auth: localStorage.getItem("token")
+                Auth: localStorage.getItem("token")
             }
-        }).then(alert("Viagem criada com sucesso!"))
-        .catch(err => console.log(err))
+        }).then(({ data }) =>{
+            localStorage.setItem("token", data.token);
+            
+        console.log("Viagem criada com sucesso!")
+        }).catch(err => console.log(err))
     }
 
 
@@ -154,8 +157,8 @@ export const CreateTripPage = () =>{
             </InputContainer>
 
             <ContainerButton>
+                <Button>Enviar</Button>
                 <Button onClick={ AdminHomePage }>Voltar</Button>
-                <Button type="submit">Enviar</Button>
             </ContainerButton>
 
 

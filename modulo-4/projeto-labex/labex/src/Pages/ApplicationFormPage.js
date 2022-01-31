@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import { useHistory } from "react-router-dom";
+import styled from "styled-components";
 
 const Container = styled.div`
     display: flex;
@@ -68,8 +68,8 @@ export const ApplicationFormPage = () =>{
 
     const history = useHistory()
     
-    const goToHomePage = () => {
-        history.push("/")
+    const goToTripPages = () => {
+        history.push("/trips")
     }
 
 
@@ -358,7 +358,7 @@ export const ApplicationFormPage = () =>{
             </InputContainer>
 
             <ContainerButton>
-                <Button onClick={ goToHomePage }>Voltar</Button>
+                <Button onClick={ goToTripPages }>Voltar</Button>
                 <Button type="submit">Enviar</Button>
             </ContainerButton>
 

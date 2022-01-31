@@ -78,6 +78,7 @@ const TripsContainer = styled.div`
     width: 100%;
     background-color: white;
     justify-content: space-between;
+    cursor: pointer;  
 
     :hover {
     background-color: #eaeaea;
@@ -87,6 +88,7 @@ const TripsContainer = styled.div`
 
 
 export const AdminHomePage = () =>{
+
     const [trips, setTrips] = useState([]);
 
     const getTrips = async () => {
@@ -103,6 +105,40 @@ export const AdminHomePage = () =>{
     }, []);
 
 
+    const logout = () => {
+        setTimeout(()=> {
+            localStorage.removeItem("token")
+            checkoutLogin()
+        }, 1000)
+    }
+
+    const checkoutLogin = () =>{
+        if(localStorage.getItem("token") !== null){
+            history.push("/admin")
+        } else {
+            history.push("/login")
+        }
+    }
+
+    useEffect(() =>{
+        checkoutLogin();
+    }, [logout]);
+
+
+    const deleteTrip = (id) => {
+         axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/celio-junior/trips/${id}`, {
+            headers: { 
+                Auth: localStorage.getItem("token")
+            }
+        }).then((res) => {
+            alert('Viagem deletada com sucesso!')
+            getTrips();
+        }).catch(err => {
+            alert((err))
+        })
+    }
+
+
     const history = useHistory()
     
     const goToHomePage = () => {
@@ -110,21 +146,18 @@ export const AdminHomePage = () =>{
     }
 
     const goToCreateTripPage = () => {
-        history.push("createtrippage")
+        history.push("createtrip")
     }
 
-    const goToLoginPage = () => {
-        history.push("/loginpage")
-    }
 
-    const tripsList = trips.map((list)=>{
+    const tripsList = trips.map((trip)=>{
         return (
-            <TripsContainerFather>
+            <TripsContainerFather key={trips.id}>
                 <TripsContainer>
                     <Text>
-                        <b>Viagem:</b> {list.name} 
+                        <b>Viagem:</b> {trip.name} 
                     </Text>
-                    <DelButton>🗑️</DelButton>
+                    <DelButton onClick={()=> deleteTrip(trip.id)}>🗑️</DelButton>
                 </TripsContainer>
             </TripsContainerFather>
         )
@@ -140,7 +173,7 @@ export const AdminHomePage = () =>{
             <ContainerButton>
                 <Button onClick={ goToHomePage }>Voltar para Home</Button>
                 <Button type="submit" onClick={ goToCreateTripPage }>Criar Viagem</Button>
-                <Button type="submit" onClick={ goToLoginPage }>Logout</Button>
+                <Button type="submit" onClick={ logout }>Logout</Button>
             </ContainerButton>
 
             <div>
