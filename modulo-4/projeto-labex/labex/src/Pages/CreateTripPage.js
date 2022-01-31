@@ -88,11 +88,8 @@ export const CreateTripPage = () =>{
             headers: {
                 Auth: localStorage.getItem("token")
             }
-        }).then(({ data }) =>{
-            localStorage.setItem("token", data.token);
-            
-        console.log("Viagem criada com sucesso!")
-        }).catch(err => console.log(err))
+        }).then(alert("Viagem criada com sucesso!")
+        ).catch(err => console.log(err))
     }
 
 
@@ -153,15 +150,12 @@ export const CreateTripPage = () =>{
                         type={"text"}
                     />
                     
+                    <ContainerButton>
+                        <Button type="submite">Enviar</Button>
+                        <Button onClick={ AdminHomePage }>Voltar</Button>
+                    </ContainerButton>
                 </form>
             </InputContainer>
-
-            <ContainerButton>
-                <Button>Enviar</Button>
-                <Button onClick={ AdminHomePage }>Voltar</Button>
-            </ContainerButton>
-
-
         </Container>
         
     );

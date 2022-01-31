@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import styled from 'styled-components';
 
 const Container = styled.div`
     display: flex;
@@ -57,7 +57,6 @@ const TripsContainer = styled.div`
     border-radius: 10px;
     margin: 10px 0px;
     max-width: 500px;
-    width: 100%;
     background-color: white;
 `
 

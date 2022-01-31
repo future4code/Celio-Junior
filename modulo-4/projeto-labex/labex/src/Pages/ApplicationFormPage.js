@@ -66,12 +66,21 @@ const Button = styled.button`
 
 export const ApplicationFormPage = () =>{
 
+    // const { form, onChange, cleanFields } = useForm({name: "", age: "", applicationText: "", profession: "", country: ""})
+
     const history = useHistory()
     
     const goToTripPages = () => {
         history.push("/trips")
     }
 
+    // const onSubmitApplyToTrip = (event) => {
+    //     event.preventDefault();
+
+    //     cleanFields();
+
+
+    // }
 
     return (
         
@@ -86,22 +95,40 @@ export const ApplicationFormPage = () =>{
                     </select>
 
                     <input
-                        type={"text"}
+                        name="name"
+                        // value={form.name}
+                        // onChange={onChange}
                         placeholder={"Nome"}
+                        required
+                        type={"text"}
                     />
                     <input
-                        type={"number"}
+                        name={"age"}
+                        // value={form.age}
+                        // onChange={onChange}
                         placeholder={"Idade"}
+                        type={"number"}
                     />
                     <input
-                        type={"text"}
+                        name="applicationText"
+                        // value={form.applicationText}
+                        // onChange={onChange}
                         placeholder={"Texto de Candidatura"}
+                        type={"text"}
                     />
                     <input
-                        type={"text"}
+                        name="profession"
+                        // value={form.profession}
+                        // onChange={onChange}
                         placeholder={"Profissão"}
+                        type={"text"}
                     />
-                    <select name="paises" id="paises">
+                    <select 
+                        id="country"
+                        name="country"
+                        // value={form.country}
+                        // onChange={onChange}
+                    >
                         <option value="" disabled selected>Escolha seu País</option>
                         <option value="Brasil">Brasil</option>
                         <option value="Afeganistão">Afeganistão</option>
