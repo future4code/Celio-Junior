@@ -1,0 +1,568 @@
+{
+	"info": {
+		"_postman_id": "c7cc05d1-d87d-4669-843d-9658d6396fce",
+		"name": "Labefy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllPlaylists",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "celio-junior-joy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createMyPlaylist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "celio-junior-joy",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pagode\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrackToMyPlaylistRock",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "celio-junior-joy",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Walking After You\", \r\n    \"artist\": \"Foo Fighters\",\r\n    \"url\": \"https://www.youtube.com/watch?v=TNwkN9vrUYY\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/ca9b9413-dbb1-45f4-a88a-a40d6482ea5e/tracks/",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"ca9b9413-dbb1-45f4-a88a-a40d6482ea5e",
+						"tracks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrackToMyPlaylistSertanejo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "celio-junior-joy",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Camaro Amarelo\", \r\n    \"artist\": \"MUNHOZ & MARIANO\",\r\n    \"url\": \"https://www.youtube.com/watch?v=M79e5ji-53w\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/3baa7516-2d47-4846-a231-02f82df48d82/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"3baa7516-2d47-4846-a231-02f82df48d82",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrackToMyPlaylistSamba",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "celio-junior-joy",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Quando a gira girou\", \r\n    \"artist\": \"Zeca Pagodinho\",\r\n    \"url\": \"https://www.youtube.com/watch?v=Nm5N4iFLU0g\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/9a8bc54b-c7b3-41e9-9dda-8078528189c2/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"9a8bc54b-c7b3-41e9-9dda-8078528189c2",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrackToMyPlaylistJazz",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "celio-junior-joy",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Ole\", \r\n    \"artist\": \"Noah Howard\",\r\n    \"url\": \"https://www.youtube.com/watch?v=5Vo0H_Ri3Ms\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/eb84e8ec-70d0-47d2-bd6b-649214941968/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"eb84e8ec-70d0-47d2-bd6b-649214941968",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrackToMyPlaylistPagode",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "celio-junior-joy",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Camisa 10\", \r\n    \"artist\": \"Turma do pagode\",\r\n    \"url\": \"https://www.youtube.com/watch?v=oZgYN4qfpl4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/c619eb5f-fd60-49ee-91d2-934219aeb26b/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"c619eb5f-fd60-49ee-91d2-934219aeb26b",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrackToMyPlaylistEletrohits",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "celio-junior-joy",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"7th Element (russian blblblblbl)\", \r\n    \"artist\": \"Vitas\",\r\n    \"url\": \"https://www.youtube.com/watch?v=B5-X_3_Kpww\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/3c2c30f7-39f6-4558-a7b0-b7239bde3a9e/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"3c2c30f7-39f6-4558-a7b0-b7239bde3a9e",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMyPlaylistRock",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "celio-junior-joy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/ca9b9413-dbb1-45f4-a88a-a40d6482ea5e/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"ca9b9413-dbb1-45f4-a88a-a40d6482ea5e",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMyPlaylisSertanejo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "celio-junior-joy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/3baa7516-2d47-4846-a231-02f82df48d82/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"3baa7516-2d47-4846-a231-02f82df48d82",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMyPlaylistSamba",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "celio-junior-joy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/9a8bc54b-c7b3-41e9-9dda-8078528189c2/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"9a8bc54b-c7b3-41e9-9dda-8078528189c2",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMyPlaylistJazz",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "celio-junior-joy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/eb84e8ec-70d0-47d2-bd6b-649214941968/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"eb84e8ec-70d0-47d2-bd6b-649214941968",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMyPlaylistPagode",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "celio-junior-joy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/c619eb5f-fd60-49ee-91d2-934219aeb26b/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"c619eb5f-fd60-49ee-91d2-934219aeb26b",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMyPlaylistEletohits",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "celio-junior-joy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/3c2c30f7-39f6-4558-a7b0-b7239bde3a9e/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"3c2c30f7-39f6-4558-a7b0-b7239bde3a9e",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchMyPlaylistRock",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "celio-junior-joy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/search?name=Rock",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Rock"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeBadMusic",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "celio-junior-joy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/eb84e8ec-70d0-47d2-bd6b-649214941968/tracks/f202fa03-88d7-48ee-ad1c-1859b03d6ab7",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"eb84e8ec-70d0-47d2-bd6b-649214941968",
+						"tracks",
+						"f202fa03-88d7-48ee-ad1c-1859b03d6ab7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteMyPlaylists",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "celio-junior-joy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/ca9b9413-dbb1-45f4-a88a-a40d6482ea5e/",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"ca9b9413-dbb1-45f4-a88a-a40d6482ea5e",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
