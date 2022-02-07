@@ -11,6 +11,7 @@ const MainContainer = styled.div`
 
 class App extends React.Component {
 
+
   render() {
     return (
       <MainContainer>
