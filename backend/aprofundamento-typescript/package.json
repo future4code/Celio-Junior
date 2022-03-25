@@ -1,0 +1,21 @@
+{
+  "name": "aprofundamento-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start1": "tsc && node ./build/exercicio1.js",
+    "start2": "tsc && node ./build/exercicio2.js",
+    "start3": "tsc && node ./build/exercicio3.js"
+  },
+  "keywords": [],
+  "author": "Celio-Junior",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23"
+  }
+}
