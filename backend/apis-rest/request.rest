@@ -1,0 +1,30 @@
+// Para requisições com body:
+// Content-Type: application/json
+
+// Para requisições com headers: 
+// Authorization: "token"
+
+###
+GET http://localhost:3003/users
+
+
+###
+GET http://localhost:3003/users/users_admin
+
+
+###
+GET http://localhost:3003/search_user?name=Bob
+
+
+###
+PUT http://localhost:3003/users
+Content-Type: application/json
+
+{
+    "id": 8,
+    "name": "show",
+    "email": "show@email",
+    "type": "NORMAL",
+    "age": 20
+}
+
