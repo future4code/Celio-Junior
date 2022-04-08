@@ -47,6 +47,8 @@ app.get("/search_user", (req: Request, res: Response) => {
   }
 });
 
+// a) Query params
+
 
 // Exercício 4
 app.put("/users", (req: Request, res: Response) => {
@@ -90,6 +92,9 @@ app.put("/users", (req: Request, res: Response) => {
   }
 }) 
 
+// a) Não percebi mudanças. O correto para se criar outro usuário seria o POST, e para edição seria o PUT.
+
+// b) Não, o método PUT é mais utilizado para alterar alguma coisa que já existe.  
 
 const server = app.listen(process.env.PORT || 3003, () => {
   if (server) {
