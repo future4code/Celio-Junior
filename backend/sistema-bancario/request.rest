@@ -14,9 +14,19 @@ Content-Type: application/json
 {
     "nome": "Ribamar Petrúcio",
     "cpf": "666.666.666-66",
-    "dataNascimento": "01/01/2000",
-    "saldo": 0 
+    "dataNascimento": "01/01/2000"
 }
 
 ###
 GET http://localhost:3003/conta/saldo-cliente?cpf=666.666.666-66
+
+
+###
+PUT http://localhost:3003/cliente/deposito
+Content-Type: application/json
+
+{
+    "nome": "Ribamar Petrúcio",
+    "cpf": "666.666.666-66",
+    "valor": 500
+}
