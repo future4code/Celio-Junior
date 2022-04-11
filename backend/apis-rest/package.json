@@ -1,0 +1,30 @@
+{
+  "name": "apis-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node ./build/index.js",
+    "ts-start": "ts-node ./src/index.ts",
+    "dev": "ts-node-dev ./src/index.ts"
+  },
+  "keywords": [
+    "api",
+    "template",
+    "rest"
+  ],
+  "author": "Celio-Junior",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.1.8",
+    "@types/cors": "^2.8.8",
+    "@types/express": "^4.17.8",
+    "@types/node": "^14.11.10"
+  }
+}
