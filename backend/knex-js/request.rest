@@ -1,0 +1,27 @@
+###  // buscar ator
+GET http://localhost:3003/actor?name=Ramos
+
+
+### // buscar gênero ator
+GET http://localhost:3003/actor/gender?gender=male
+
+
+### 
+GET http://localhost:3003/actor/media-salario?gender=male
+
+
+### // editar salário ator
+PUT http://localhost:3003/actor/001
+Content-Type: application/json 
+
+{
+ "salary": 500000
+}
+
+
+###  // endpoint deletar ator
+DELETE http://localhost:3003/actor/001
+
+
+### // consultar ator por id
+GET http://localhost:3003/gender/actor?gender=female
