@@ -1,0 +1,9 @@
+### 
+GET http://localhost:3003/Users
+
+### 
+GET http://localhost:3003/Users?name=Aline
+
+
+### 
+GET http://localhost:3003/UserType/cx
