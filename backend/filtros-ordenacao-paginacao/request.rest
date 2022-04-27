@@ -7,3 +7,7 @@ GET http://localhost:3003/Users?name=Aline
 
 ### 
 GET http://localhost:3003/UserType/cx
+
+
+###
+GET http://localhost:3003/Pages?size=2
