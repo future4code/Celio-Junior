@@ -1,0 +1,46 @@
+### // Criar usuário
+POST http://localhost:3003/user
+Content-Type: application/json
+
+{
+    "name": "Pato Patolino",
+    "nickname": "Patolino",
+    "email": "Patolino@gmail.com"
+}
+
+
+### // Consultar usuário por ID
+GET http://localhost:3003/user/assasa
+
+
+###
+PUT http://localhost:3003/user/edit/108dce73-ca6a-499f-a963-25ec4e0b65a6
+Content-Type: application/json
+
+{
+    "name": "Juvenal Juvêncio Junior",
+    "nickname": "JuJu"
+}
+
+
+### // Criar tarefa
+POST http://localhost:3003/task
+Content-Type: application/json
+
+{
+    "title": "Golden Yeggs",
+    "description": "Patolino e os ovos de ouro",
+    "limitDate": "01/01/1987",
+    "creatorUserId": "0a9e2176-da13-4e9f-b15e-ac4dd7e503b9"
+}
+
+### // Consultar tarefa por ID
+GET http://localhost:3003/task/56280bb5-60df-4966-9cba-dcbecc5378eb
+
+
+### // Consultar todos os usuários
+GET http://localhost:3003/users/all
+
+
+### // Consultar tarefa por id do Criador
+GET http://localhost:3003/tasks?id=0a9e2176-da13-4e9f-b15e-ac4dd7e503b9
