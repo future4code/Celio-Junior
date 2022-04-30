@@ -1,13 +1,40 @@
-### 
-GET http://localhost:3003/Users
-
-### 
-GET http://localhost:3003/Users?name=Aline
+###  // Consulta Usuários
+GET http://localhost:3003/users
 
 
-### 
-GET http://localhost:3003/UserType/cx
+### // Criar Usuário
+POST http://localhost:3003/createUser
+Content-Type: application/json
+
+{
+    "name": "Pato Patolino",
+    "email": "Patolino@gmail.com",
+    "password": "ahwyugquyhuavghscvyy1v12"
+}
 
 
-###
-GET http://localhost:3003/Pages?size=2
+### // Cadastro de Produto
+POST http://localhost:3003/cadProduct
+Content-Type: application/json
+
+{
+    "name": "PlayStation 5 2020 Nova Geração 825GB 1 Controle - Sony + Lego Star Wars: O Despertar da Força PS4",
+    "price": 4346.23,
+    "imageUrl": "https://bit.ly/3Ks3FRp"
+}
+
+
+### // Consultar Produtos
+GET http://localhost:3003/products
+
+
+
+### // Cadastro de Produto
+POST http://localhost:3003/RegistrarCupom
+Content-Type: application/json
+
+{
+    "userId": "896e3c78-2a35-4832-96a2-9ac2d06f0b46",
+    "productId": "cf61fe18-3688-4641-8cea-2973f1fd47c8",
+    "quantity": 3
+}
