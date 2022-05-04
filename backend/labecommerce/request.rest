@@ -1,4 +1,4 @@
-###  // Consulta Usuários
+###  // Consultar Usuários
 GET http://localhost:3003/users
 
 
@@ -7,34 +7,43 @@ POST http://localhost:3003/createUser
 Content-Type: application/json
 
 {
-    "name": "Pato Patolino",
-    "email": "Patolino@gmail.com",
-    "password": "ahwyugquyhuavghscvyy1v12"
+    "name": "Tio Patinhas",
+    "email": "moeda1@gmail.com",
+    "password": "1o2jo981y2gashbkh812uy9831"
 }
 
 
-### // Cadastro de Produto
+### // Cadastrar Produto
 POST http://localhost:3003/cadProduct
 Content-Type: application/json
 
 {
-    "name": "PlayStation 5 2020 Nova Geração 825GB 1 Controle - Sony + Lego Star Wars: O Despertar da Força PS4",
-    "price": 4346.23,
-    "imageUrl": "https://bit.ly/3Ks3FRp"
+    "name": "xBox One",
+    "price": 2199.90,
+    "imageUrl": "https://bityli.com/xBxAr"
 }
 
 
-### // Consultar Produtos
-GET http://localhost:3003/products
+### // Lista todos os produtos com order e search
+GET http://localhost:3003/products?search=xbox
 
 
 
-### // Cadastro de Produto
-POST http://localhost:3003/RegistrarCupom
+### // Cadastrar Registro de Compra
+POST http://localhost:3003/purchases
 Content-Type: application/json
 
 {
-    "userId": "896e3c78-2a35-4832-96a2-9ac2d06f0b46",
-    "productId": "cf61fe18-3688-4641-8cea-2973f1fd47c8",
-    "quantity": 3
+    "userId": "936a9cb4-ba0c-4d18-9b5e-8e98d3397746",
+    "productId": "f0ea1b6b-0de1-48b8-95c9-843ec9269dd0",
+    "quantity": 1
 }
+
+
+### // Buscar compras de um usuário
+GET http://localhost:3003/users/0a9e2176-da13-4e9f-b15e-ac4dd7e503b9/purchases
+
+
+
+### // Consultar usuários e suas compras
+GET http://localhost:3003/users/purchase

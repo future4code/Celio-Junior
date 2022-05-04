@@ -11,7 +11,7 @@ export async function cadProduct(
     const result = await connection("labecommerce_products")
     .insert({
         id,
-        name,
+        product_name: name,
         price,
         image_url: imageUrl,
     });
@@ -23,6 +23,16 @@ export const productBase = async (req: Request, res: Response): Promise<void> =>
     try {
 
         const {name, price, imageUrl} = req.body
+
+        if(!name){
+            throw new Error("Você precisa informar um nome de produto")
+          };
+          if(!price || price.length === 0){
+            throw new Error("Voçê precisa informar um valor maior que 0")
+          };
+          if(!imageUrl){
+            throw new Error("Você precisa informar a URL de uma imagem válida")
+          };
         
         await cadProduct(name, price, imageUrl)
 

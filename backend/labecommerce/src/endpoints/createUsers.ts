@@ -23,6 +23,19 @@ export const userBase = async (req: Request, res: Response): Promise<void> => {
     try {
 
         const {name, email, password} = req.body
+
+          if(!name){
+            throw new Error("Você precisa informar um nome")
+          };
+          if(!email || email.length < 10){
+            throw new Error("Voçê precisa informar um e-mail válido com pelo menos 10 caracteres")
+          };
+          if(!email.includes("@")){
+            throw new Error("Endereço de e-mail precisar incluir um @")
+          };
+          if(!password || password.length < 6){
+            throw new Error("Você precisa informar um password e ter no mínimo 6 caracteres")
+          };
         
         const users = await createUser(name, email, password)
 
