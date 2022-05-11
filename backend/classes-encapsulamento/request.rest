@@ -1,0 +1,13 @@
+###  // Consultar Usuários
+GET http://localhost:3003/userAccount
+
+
+### // Criar Usuário
+POST http://localhost:3003/user
+Content-Type: application/json
+
+{
+    "cpf": "000.000.000-01",
+    "name": "Josiscreldo",
+    "age": 17
+}
