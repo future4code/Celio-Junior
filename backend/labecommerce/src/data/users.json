@@ -1,0 +1,26 @@
+[
+	{
+		"id" : "0a9e2176-da13-4e9f-b15e-ac4dd7e503b9",
+		"name" : "Soter",
+		"email" : "soter@hotmail.com",
+		"password" : "bananinha123"
+	},
+	{
+		"id" : "108dce73-ca6a-499f-a963-25ec4e0b65a6",
+		"name" : "João",
+		"email" : "joao@uol.com,br",
+		"password" : "etatudobem"
+	},
+	{
+		"id" : "2b34932f-d54e-4f35-99c2-c2bdc29a3c62",
+		"name" : "Paula",
+		"email" : "paula@gmail.com",
+		"password" : "showdalabenu"
+	},
+	{
+		"id" : "3d416aca-8f1a-4073-8e79-af370eebdc05",
+		"name" : "Zeca",
+		"email" : "Zeca@warner.com",
+		"password" : "zecaurubu"
+	}
+	]
