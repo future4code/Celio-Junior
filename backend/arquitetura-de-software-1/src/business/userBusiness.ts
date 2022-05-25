@@ -1,5 +1,6 @@
 import { BaseDatabase } from '../data/BaseDataBase'
 import { v4 as generateId} from 'uuid'
+import { UserDataBase } from '../data/userDataBase'
 
 interface UserRequestData {
     name: string,
@@ -17,12 +18,18 @@ export class UserBusiness extends BaseDatabase {
                 throw new Error("Verifique se foi informado o nome, o email e a senha!")
             }
 
-            await BaseDatabase.connection("User_Arq").insert({
-                id: generateId(),
+            const id = generateId()
+
+            const userInfo = {
+                id,
                 name,
                 email,
                 password
-        })
+            }
+
+            const userDataBase = new UserDataBase()
+            .insertUser(userInfo)
+
             
         } catch (error: any) {
             throw new Error(error.messsage)
