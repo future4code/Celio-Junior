@@ -3,7 +3,10 @@ POST http://localhost:3003/createUser
 Content-Type: application/json
 
 {
-    "name": "Juvenal",
-    "email": "Juvenal-Juvencio@gmail.com",
-    "password": "JujuTricolô"
+    "name": "Clodoaldo",
+    "email": "Clodoaldo@gmail.com",
+    "password": "Cloclo"
 }
+
+###
+get http://localhost:3003/allUsers

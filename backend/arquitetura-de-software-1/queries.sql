@@ -21,3 +21,5 @@ CREATE TABLE Architecture_UserTask_relation (
     FOREIGN KEY (task_id) REFERENCES Architecture_Task(id),
     FOREIGN KEY (responsible_user_id) REFERENCES Architecture_User(id)
 );
+
+SELECT * FROM `User_Arq`

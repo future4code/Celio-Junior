@@ -14,7 +14,15 @@ export class UserController {
         res.status(201).send("Usuário criado com sucesso!")
         
     } catch (error: any) {
-        throw new Error(error.messsage)
+        throw new Error(error.messsage || error.sqlMessage)
     }
 }
+    public getUser = async (req: Request, res: Response) => {
+        const userBusiness = new UserBusiness()
+
+        const user = await userBusiness.getAllUsers()
+
+        res.status(200).send(user)
+    }
+
 }
