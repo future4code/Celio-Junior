@@ -1,0 +1,29 @@
+POST http://localhost:3003/user/create
+Content-Type: application/json
+
+{
+    "name": "teste",
+    "email": "email@email.com",
+    "password": "23432535"
+}
+
+
+###
+GET http://localhost:3003/user/All
+
+
+
+###
+POST http://localhost:3003/movie/create
+Content-Type: application/json
+
+{
+    "title": "MORBIUS",
+    "description": "Baseado no personagem de mesmo nome da Marvel Comics, Michael Morbius (Jared Letto) sempre sofreu com uma condição rara em seu sangue que o faz andar de bengala e desde criança ser excluído por outros, mas sua vida solitária foi preenchida por livros. Após se formar na faculdade, Doutor Morbius é renomado na área de biomedicina e tenta achar uma cura para sua rara condição, afim de não apenas se ajudar, mas ajudar outras pessoas que também sofrem como ele. Experimentando com o DNA de morcegos, Morbius espera achar a cura e se usa como teste para o soro. Usando o DNA que isolou e uma mistura de eletrochoque, a cura foi um sucesso temporário, mas os efeitos colaterais acabaram transformando-o em um pseudo-vampiro e que agora precisa sobreviver como um. Apesar de ganhar capacidades iguais a de um morcego, Morbius precisa de sangue humano para sobreviver, os efeitos colaterais também o fez mudar fisicamente, ganhando presas e uma pele pálida. Além disso, a cada pessoa que ele morde, ela também vira um ser igual a ele.",
+    "duration": 105,
+    "year": 2022
+}
+
+
+###
+GET http://localhost:3003/movie/All
