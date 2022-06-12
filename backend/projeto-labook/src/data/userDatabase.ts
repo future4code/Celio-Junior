@@ -15,4 +15,12 @@ export class UserDataBase extends BaseDataBase {
         .into(UserDataBase.TABLE_NAME)
     }
 
+    public getAllUsers = async () => {
+        const getUsers = await UserDataBase.connection
+        .select("*")
+        .from(UserDataBase.TABLE_NAME)
+        
+        return getUsers
+    }
+
 }
