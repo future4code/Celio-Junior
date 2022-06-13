@@ -41,3 +41,7 @@ Content-Type: application/json
 
 ### // Deletar Amizade
 DELETE http://localhost:3003/friend/71eabe27-7aaf-453b-874e-e82373ef2227?idFriend=4e806e21-cd02-4839-a252-4e9e2ff358ee
+
+
+### // Consultar Posts Amigos
+GET http://localhost:3003/friend/feed/4e806e21-cd02-4839-a252-4e9e2ff358ee

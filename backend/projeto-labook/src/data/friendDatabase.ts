@@ -1,4 +1,4 @@
-import { FriendsDTO } from "../model/friendsDTO";
+import { Feed, FriendsDTO } from "../model/friendsDTO";
 import { BaseDataBase } from "./baseDatabase";
 
 export class FriendsDatabase extends BaseDataBase {
@@ -32,5 +32,19 @@ export class FriendsDatabase extends BaseDataBase {
             friend_id: idUser
         })
         .from(FriendsDatabase.TABLE_NAME)
+    }
+
+    async feed (req: Feed): Promise<any>{
+        const feedPosts = await FriendsDatabase.connection
+        .select("*")
+        .from(FriendsDatabase.TABLE_NAME)
+        .leftJoin("labook_posts", 
+                  "labook_friends.friend_id", 
+                  "labook_posts.author_id")
+        .where({user_id: req.userId})
+        .orderBy("labook_posts.created_at", "desc")
+        .limit(5)
+
+        return feedPosts
     }
 }

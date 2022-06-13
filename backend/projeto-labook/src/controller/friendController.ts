@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { FriendBusiness } from '../business/friendBusiness';
+import { Feed } from '../model/friendsDTO';
 
 export class FriendController {
     async create(req: Request, res: Response): Promise<void> {
@@ -31,4 +32,20 @@ export class FriendController {
             res.status(500).send(error.sqlMessage || error.message);
         }   
     }
+
+    async feedPost (req: Request, res: Response):Promise<any> {
+        try {
+            const { userId } = req.params;
+            
+            const input: Feed = {
+                userId
+            }
+
+            const getAllFeeds = await new FriendBusiness().feedPost(input);
+            
+            res.status(200).send(getAllFeeds);
+    }catch (error: any) {
+        res.status(400).send(error.sqlMessage || error.message);
+    }
+}
 }
