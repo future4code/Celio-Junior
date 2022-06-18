@@ -1,0 +1,29 @@
+
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+   "name": "Peter Parker", 
+   "nickname": "Spider Man", 
+   "email": "spidey@oscorp.com" ,
+   "password": "ilovemaryjane"
+}
+###
+
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+   "email": "spidey@oscorp.com",
+   "password": "ilovemaryjane"
+}
+
+###
+PUT http://localhost:3003/user/edit/3e153b31-9198-4a83-b284-4a05071453a7
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNlMTUzYjMxLTkxOTgtNGE4My1iMjg0LTRhMDUwNzE0NTNhNyIsImlhdCI6MTY1NTUxOTA4NCwiZXhwIjoxNjU1NTIyNjg0fQ.9mG_UZtU1sc-L0iLY2yfWGgNv8j6HYvclBRmx5vWQr0
+
+{
+   "name": "Mary Jane",
+   "nickname": "MJ" 
+}
