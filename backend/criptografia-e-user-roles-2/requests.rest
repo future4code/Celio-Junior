@@ -1,0 +1,31 @@
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+   "name": "Peter Parker", 
+   "nickname": "Spider Man", 
+   "email": "peter@marvel.com" ,
+   "password": "iloveMJ",
+   "role": "Normal"
+}
+
+
+###
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+    "email": "peter@marvel.com" ,
+   "password": "iloveMJ"
+}
+
+
+###
+PUT http://localhost:3003/user/edit/
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ0NjQ3NTUzLWFiMjQtNDVhNS04YjBiLTMxNjUxNjc4ZmIwZSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTU3ODQ3NzgsImV4cCI6MTY1NTc4NjU3OH0.imWCsmXtVtA8bSxCH5QP3awjWhaBbavY-0Pt5jT5xUA
+
+{
+   "name": "Peter Parker", 
+   "nickname": "Spider Man"
+}
