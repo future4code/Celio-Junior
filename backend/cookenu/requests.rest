@@ -1,0 +1,38 @@
+// Criar Usuário
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+   "name": "Aristóteles", 
+   "email": "Aristóteles@bol.com" ,
+   "password": "217y371$23gyd",
+   "role": "ADMIN"
+}
+
+
+// Login de usuário
+###
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+   "email": "Aristóteles@bol.com" ,
+   "password": "217y371$23gyd"
+}
+
+
+// Pegar Profile de usuário
+###
+GET http://localhost:3003/user/profile
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI4ZDU1N2UxLTUzMzQtNDcyYi1hOTVjLThlZDJjMGE0OTM4NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1NTk0NDg0MywiZXhwIjoxNjU1OTQ0OTYzfQ.W2eCOenID7T0Nocu6UGsFvUHtyHH69HH7B5zu3z3blY
+
+
+###
+PUT http://localhost:3003/user/edit/
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ0NjQ3NTUzLWFiMjQtNDVhNS04YjBiLTMxNjUxNjc4ZmIwZSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTU3ODQ3NzgsImV4cCI6MTY1NTc4NjU3OH0.imWCsmXtVtA8bSxCH5QP3awjWhaBbavY-0Pt5jT5xUA
+
+{
+   "name": "Peter Parker", 
+   "nickname": "Spider Man"
+}
