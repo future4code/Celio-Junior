@@ -5,18 +5,18 @@ import {
         InvalidName,
         InvalidPassword,
         UnauthorizedUser,
-} from "../error/customError";
-import { AuthenticationData } from "../model/types";
+} from "../error/CustomError";
+import { AuthenticationData } from "../model/Types";
 import {
         UserInputDTO,
         user,
         EditUserInputDTO,
         EditUserInput,
         LoginInputDTO,
-} from "../model/user";
-import { generateToken, getData } from "../services/authenticator";
-import { compareHash, generateHash } from "../services/hashManager";
-import { generateId } from "../services/idGenerator";
+} from "../model/User";
+import { generateToken, getData } from "../services/Authenticator";
+import { compareHash, generateHash } from "../services/HashManager";
+import { generateId } from "../services/IdGenerator";
 
 const userDatabase = new UserDatabase();
 export class UserBusiness {

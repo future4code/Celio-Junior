@@ -1,5 +1,5 @@
 import * as jwt from 'jsonwebtoken';
-import { AuthenticationData } from "../model/types";
+import { AuthenticationData } from "../model/Types";
 
 const expiresIn = "10min";
   

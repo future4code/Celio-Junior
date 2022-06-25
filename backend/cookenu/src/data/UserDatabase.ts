@@ -1,5 +1,5 @@
-import { CustomError } from "../error/customError";
-import { EditUserInput, user } from "../model/user";
+import { CustomError } from "../error/CustomError";
+import { EditUserInput, user } from "../model/User";
 import { BaseDatabase } from "./BaseDatabase";
 
 export class UserDatabase extends BaseDatabase {

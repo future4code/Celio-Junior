@@ -28,3 +28,15 @@ export class UnauthorizedUser extends CustomError{
     }
 }
 
+export class InvalidRecipes extends CustomError{ 
+    constructor(){
+        super(400, "Receita não encontrada")
+    }
+}
+
+export class InvalidToken extends CustomError{ 
+    constructor(){
+        super(400, "Token não encontrado")
+    }
+}
+

@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { UserBusiness } from "../business/UserBusiness";
-import { EditUserInputDTO, LoginInputDTO, UserInputDTO } from "../model/user";
+import { UserBusiness } from '../business/UserBusiness';
+import { EditUserInputDTO, LoginInputDTO, UserInputDTO } from "../model/User";
 
 const userBusiness = new UserBusiness();
 export class UserController {

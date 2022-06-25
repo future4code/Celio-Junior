@@ -24,15 +24,26 @@ Content-Type: application/json
 // Pegar Profile de usuário
 ###
 GET http://localhost:3003/user/profile
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI4ZDU1N2UxLTUzMzQtNDcyYi1hOTVjLThlZDJjMGE0OTM4NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1NTk0NDg0MywiZXhwIjoxNjU1OTQ0OTYzfQ.W2eCOenID7T0Nocu6UGsFvUHtyHH69HH7B5zu3z3blY
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI4ZDU1N2UxLTUzMzQtNDcyYi1hOTVjLThlZDJjMGE0OTM4NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1NjExNzMzNSwiZXhwIjoxNjU2MTE3OTM1fQ.02s9s0w0orJr3OuCn2fxd5IMKG3hdVMyCPVQE4jOFV8
 
 
-###
-PUT http://localhost:3003/user/edit/
+
+### // Criar Receitas
+POST http://localhost:3003/recipe/create
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ0NjQ3NTUzLWFiMjQtNDVhNS04YjBiLTMxNjUxNjc4ZmIwZSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTU3ODQ3NzgsImV4cCI6MTY1NTc4NjU3OH0.imWCsmXtVtA8bSxCH5QP3awjWhaBbavY-0Pt5jT5xUA
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI4ZDU1N2UxLTUzMzQtNDcyYi1hOTVjLThlZDJjMGE0OTM4NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1NjExNzMzNSwiZXhwIjoxNjU2MTE3OTM1fQ.02s9s0w0orJr3OuCn2fxd5IMKG3hdVMyCPVQE4jOFV8
 
 {
-   "name": "Peter Parker", 
-   "nickname": "Spider Man"
+   "title": "teste",
+   "description": "teste"
 }
+
+
+### // Pegar todas as receitas
+GET http://localhost:3003/recipe/AllRecipes
+
+
+
+### // Pegar receitas por id
+GET http://localhost:3003/recipe/8d8ec97c-ab58-4b96-a64f-1574ec7d8dd6
+# Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI4ZDU1N2UxLTUzMzQtNDcyYi1hOTVjLThlZDJjMGE0OTM4NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1NjEwMjM2MiwiZXhwIjoxNjU2MTAyOTYyfQ.kg3d5s0RGqr_IFHHjrY2FByMcvvQr3TsH13W5vjg7MQ
