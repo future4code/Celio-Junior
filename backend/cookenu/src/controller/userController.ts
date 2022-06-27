@@ -51,6 +51,23 @@ export class UserController {
     }
   };
 
+  public getProfileFriends = async (req: Request, res: Response) => {
+    try {
+      const token = req.headers.authorization as string;
+      const userBusiness = new UserBusiness();
+
+      const id = req.params.id;
+
+      const user = await userBusiness.getProfileFriend(token, id);
+      
+      res.status(200).send(user);
+    } catch (error: any) {
+      res.status(400).send({
+        message: error.message,
+      });
+    }
+  };
+
   public editUser = async (req: Request, res: Response) => {
     try {
       const input: EditUserInputDTO = {

@@ -57,4 +57,15 @@ export class UserDatabase extends BaseDatabase {
       throw new CustomError(400, error.message);
     }
   };
+
+  public getFriend = async (id: string) => {
+    try {
+      const result = await UserDatabase.connection("Cookenu_users")
+        .select("id", "name", "email")
+        .where({ id });
+      return result;
+    } catch (error: any) {
+      throw new CustomError(404, error.message);
+    }
+  };
 }

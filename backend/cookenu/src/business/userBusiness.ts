@@ -104,6 +104,21 @@ export class UserBusiness {
     return output
   }
 
+  public getProfileFriend = async (token: string, id: string): Promise<any[]> => {
+    try {
+      if (!token) {
+        throw new CustomError(400, "Informe o token do usuário");
+      }
+      
+      const profileFriend = userDatabase.getFriend(id);
+      
+      return profileFriend;
+
+    } catch (error: any) {
+      throw new CustomError(400, error.message);
+    }
+  };
+
   public editUser = async (input: EditUserInputDTO): Promise<void> => {
     try {
       let { name, id, token } = input;
