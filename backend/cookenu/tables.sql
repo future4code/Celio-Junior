@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS Cookenu_users (
+    id VARCHAR(64) PRIMARY KEY,
+    name VARCHAR(64) NOT NULL,
+    email VARCHAR(64) NOT NULL,
+    password VARCHAR(64) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Cookenu_recipes (
+    id VARCHAR(64) PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description VARCHAR(2077) NOT NULL,
+    author_id VARCHAR(64) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (author_id) REFERENCES Cookenu_users (id)
+);
+
+ALTER TABLE Cookenu_users ADD COLUMN role VARCHAR(255) DEFAULT "NORMAL"

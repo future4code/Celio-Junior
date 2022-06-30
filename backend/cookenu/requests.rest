@@ -1,0 +1,54 @@
+// Criar Usuário
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+   "name": "Aristóteles", 
+   "email": "Aristóteles@bol.com" ,
+   "password": "217y371$23gyd",
+   "role": "ADMIN"
+}
+
+
+// Login de usuário
+###
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+   "email": "Aristóteles@bol.com" ,
+   "password": "217y371$23gyd"
+}
+
+
+// Pegar Profile de usuário
+###
+GET http://localhost:3003/user/profile
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI4ZDU1N2UxLTUzMzQtNDcyYi1hOTVjLThlZDJjMGE0OTM4NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1NjI5MTYwNywiZXhwIjoxNjU2MjkyMjA3fQ.rvVCVeJgJmm5Svz73k8jztn4ukhgDRjJGmIYZgYUUbA
+
+
+// Pegar Profile de Amigo
+###
+GET http://localhost:3003/user/profileFriend/28d557e1-5334-472b-a95c-8ed2c0a49385
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI4ZDU1N2UxLTUzMzQtNDcyYi1hOTVjLThlZDJjMGE0OTM4NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1NjI5MTYwNywiZXhwIjoxNjU2MjkyMjA3fQ.rvVCVeJgJmm5Svz73k8jztn4ukhgDRjJGmIYZgYUUbA
+
+
+### // Criar Receitas
+POST http://localhost:3003/recipe/create
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI4ZDU1N2UxLTUzMzQtNDcyYi1hOTVjLThlZDJjMGE0OTM4NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1NjExNzMzNSwiZXhwIjoxNjU2MTE3OTM1fQ.02s9s0w0orJr3OuCn2fxd5IMKG3hdVMyCPVQE4jOFV8
+
+{
+   "title": "teste",
+   "description": "teste"
+}
+
+
+### // Pegar todas as receitas
+GET http://localhost:3003/recipe/AllRecipes
+
+
+
+### // Pegar receitas por id
+GET http://localhost:3003/recipe/8d8ec97c-ab58-4b96-a64f-1574ec7d8dd6
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI4ZDU1N2UxLTUzMzQtNDcyYi1hOTVjLThlZDJjMGE0OTM4NSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1NjEwMjM2MiwiZXhwIjoxNjU2MTAyOTYyfQ.kg3d5s0RGqr_IFHHjrY2FByMcvvQr3TsH13W5vjg7MQ
