@@ -1,6 +1,6 @@
 export enum STATUS_TYPES {
    PENDENTE = "Pendente",
-   PROGRESSO = "Em Andamento",
+   PROGRESSO = "Em progresso",
    CONCLUIDO = "Concluido",
 }
 
