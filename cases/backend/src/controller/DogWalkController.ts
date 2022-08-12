@@ -6,14 +6,13 @@ import { InvalidTime,InvalidPet, InvalidData } from "../error/customError";
 
 export class DogWalkController {
 
-  public createWalk = async (req: Request, res: Response):Promise<void> => {
+  public createWalk = async (req: Request, res: Response): Promise<void> => {
       try {
          if (req.body.pets < 1) {
             throw new InvalidPet();
           }
 
-          if (!req.body.data_agendamento || !req.body.duracao || !req.body.latitude || !req.body.longitude
-            || !req.body.pets || !req.body.hora_inicio || !req.body.hora_termino) {
+          if (!req.body.data_agendamento || !req.body.duracao || !req.body.latitude || !req.body.longitude || !req.body.pets || !req.body.hora_inicio || !req.body.hora_termino) {
             throw new InvalidData();
           }
 
@@ -21,14 +20,7 @@ export class DogWalkController {
             throw new InvalidTime()
           }
 
-         const { data_agendamento, 
-            duracao, 
-            latitude, 
-            longitude, 
-            pets, 
-            hora_inicio,
-            hora_termino }= req.body
-
+         const { data_agendamento, duracao, latitude, longitude, pets, hora_inicio, hora_termino } = req.body
 
          const input: WalkInputDTO = {
             data_agendamento, 
@@ -38,7 +30,6 @@ export class DogWalkController {
             pets, 
             hora_inicio,
             hora_termino 
-
          }
 
          const dogWalkBusiness = new DogWalkBusiness

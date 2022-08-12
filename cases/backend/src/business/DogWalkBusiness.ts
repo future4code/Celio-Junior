@@ -1,4 +1,4 @@
-import { GenerateID } from "../services/generateId";
+import { GenerateID } from "../services/GenerateId";
 import { DogWalkDatabase } from "../data/DogWalkDatabase";
 import { STATUS_TYPES, walk, WalkInputDTO } from "../model/Walk";
 
