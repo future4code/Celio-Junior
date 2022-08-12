@@ -2,7 +2,6 @@ import { GenerateID } from "../services/generateId";
 import { DogWalkDatabase } from "../data/DogWalkDatabase";
 import { STATUS_TYPES, walk, WalkInputDTO } from "../model/Walk";
 
-
 const generateId = new GenerateID()
 
 export class DogWalkBusiness {

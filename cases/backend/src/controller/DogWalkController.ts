@@ -4,9 +4,9 @@ import { DogWalkDatabase } from "../data/DogWalkDatabase";
 import { WalkInputDTO } from "../model/Walk"
 import { InvalidTime,InvalidPet, InvalidData } from "../error/customError";
 
-export class WalkingController {
+export class DogWalkController {
 
-  public createWalking = async (req: Request, res: Response):Promise<void> => {
+  public createWalk = async (req: Request, res: Response):Promise<void> => {
       try {
          if (req.body.pets < 1) {
             throw new InvalidPet();
@@ -49,40 +49,36 @@ export class WalkingController {
          res.status(400).send(error.sqlMessage || error.message)
       }
    }
-   public showWalking = async (
-      req: Request,
-      res: Response
-   ) => {
+   
+   public showWalk = async (req: Request, res: Response) => {
       try {
        const input:any = {
            id: req.params.id,
        }
-         const duracao = await new DogWalkDatabase().showWalk(input);
 
-         res.send(duracao).status(200);
+       const duracao = await new DogWalkDatabase().showWalk(input);
+
+       res.send(duracao).status(200);
       } catch (error:any) {
          res.send({ message: error.message }).status(error.sqlMessage || error.message);
      }
    }
-   public startWalking = async (
-      req: Request,
-      res: Response
-   ) => {
+   
+   public startWalk = async (req: Request, res: Response) => {
       try {
        const input:any = {
            id: req.params.id,
        }
-         const inicio = await new DogWalkDatabase().startWalk(input);
+        
+       const inicio = await new DogWalkDatabase().startWalk(input);
 
-         res.send(inicio).status(200);
+       res.send(inicio).status(200);
       } catch (error:any) {
-         res.send({ message: error.message }).status(error.sqlMessage || error.message);
+       res.send({ message: error.message }).status(error.sqlMessage || error.message);
      }
    }
-   public finishWalking = async (
-      req: Request,
-      res: Response
-   ) => {
+
+   public finishWalk = async (req: Request, res: Response) => {
       try {
        const input:any = {
            id: req.params.id,
@@ -94,10 +90,8 @@ export class WalkingController {
          res.send({ message: error.message }).status(error.sqlMessage || error.message);
      }
    }
-   public allwalking = async (
-      req: Request,
-      res: Response
-   ) => {
+
+   public allWalk = async (req: Request, res: Response) => {
       try {
        const input:any = {
            id: req.params.id,

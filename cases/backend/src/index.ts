@@ -1,76 +1,17 @@
-import app from "./App"
+import dotenv from "dotenv";
+import express from "express";
+import {AddressInfo} from "net";
 
-import { userRouter } from "./routes/userRouter"
-import { productRouter } from "./routes/productRouter"
-import { planRouter } from "./routes/planRouter"
+dotenv.config();
 
-app.use('/user/', userRouter)
-app.use('/product/', productRouter)
-app.use('/plan/', planRouter)
+const app = express();
+app.use(express.json());
 
-
-type Pessoas = {
-    nome: string,
-    idade: number,
-    email: string
-}
-
-const arrayDePessoas: Pessoas[] = [
-    {
-        nome: "claudio",
-        idade: 16,
-        email: "claudio@gmail.com"
-    },
-    {
-        nome: "roberto",
-        idade: 18,
-        email: "roberto@gmail.com"
-    },
-    {
-        nome: "jose",
-        idade: 18,
-        email: "jose@gmail.com"
-    }]
-
-function maioresDeDezoito(arrayDePessoas: Pessoas[]) {
-    // let maioiresDeIdade = []
-
-    // for (const pessoas of arrayDePessoas) { 
-    //     if (pessoas.idade >= 18) {
-    //             maioiresDeIdade.push({nome: pessoas.nome, email: pessoas.email})
-    //     }}
-
-    //     if (!maioiresDeIdade.length) {
-    //         return 'não existe maiores de 18 na lista'
-    //     }
-
-    // return maioiresDeIdade
-    
-
-    // if (maioiresDeIdade.length) {
-    //     const a = maioiresDeIdade.map((item) => {
-    //         return {nome: item.nome, email: item.email}
-    //     })
-        
-    //     return a
-    // }
-
-        
-    
-    const maioresDeIdade = arrayDePessoas.filter((pessoa) => {
-        return pessoa.idade >= 18
-    })
-
-    if (maioresDeIdade.length) {
-        const maiores = maioresDeIdade.map((pessoa) => { 
-            return {nome: pessoa.nome, email: pessoa.email}
-        })
-        
-        return maiores
+const server = app.listen(3000, () => {
+    if (server) {
+      const address = server.address() as AddressInfo;
+      console.log(`Servidor rodando em http://localhost:${address.port}`);
+    } else {
+      console.error(`Falha ao rodar o servidor.`);
     }
-
-    return 'não existe maiores de 18 na lista'
-
-}
-
-console.log(maioresDeDezoito(arrayDePessoas));
+});
