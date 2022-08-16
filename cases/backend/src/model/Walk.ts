@@ -7,23 +7,23 @@ export enum STATUS_TYPES {
 export type walk = {
     id: string,
     Status:STATUS_TYPES.PENDENTE,
-    data_agendamento: Date,
+    dataAgendamento: Date,
     preco: number,
     duracao:string,
     latitude:number,
     longitude:number,
     pets:number,
-    hora_inicio:string,
-    hora_termino:string
+    horaInicio:string,
+    horaTermino:string
  }
 
  export interface WalkInputDTO  {
-    data_agendamento: Date,
+    dataAgendamento: Date,
     duracao:string,
     latitude:number,
     longitude:number,
     pets:number,
-    hora_inicio:string,
-    hora_termino:string
+    horaInicio:string,
+    horaTermino:string
  }
 

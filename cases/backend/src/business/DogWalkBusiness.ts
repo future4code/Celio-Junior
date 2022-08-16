@@ -7,45 +7,29 @@ const generateId = new GenerateID()
 export class DogWalkBusiness {
   public createWalk = async (input: WalkInputDTO) => {
     try {
-      const {
-        data_agendamento,
-        duracao,
-        latitude,
-        longitude,
-        pets,
-        hora_inicio,
-        hora_termino } = input;
-
+      const { dataAgendamento, duracao, latitude, longitude, pets, horaInicio, horaTermino } = input;
 
      const calculosDosPasseios = (duracao: any, pets: any) => {
         if (duracao === "00:30:00") {
           if (pets >= 2) {
             let quant = pets
-            pets = pets * -15
+              pets = pets * -15
             let preco: number = 25 * quant + pets
-            
-            return preco
-
+              return preco
           } else {
             let preco: number = 25 * pets
-
-            return preco
-
+              return preco
           }
 
         } else if (duracao === "01:00:00") {
           if (pets >= 2) {
             let quant = pets
-            pets = pets * -20
+              pets = pets * -20
             let preco: number = 35 * quant + pets
-
-            return preco
-
+              return preco
           } else {
             let preco: number = 35 * pets
-
-            return preco
-
+              return preco
           }
         }
       }
@@ -59,28 +43,27 @@ export class DogWalkBusiness {
       const walk: walk = {
         id,
         Status,
-        data_agendamento,
+        dataAgendamento,
         preco,
         duracao,
         latitude,
         longitude,
         pets,
-        hora_inicio,
-        hora_termino
+        horaInicio,
+        horaTermino
       }
 
       await dogWalkDatabase.insertWalk({
         id,
         Status,
-        data_agendamento,
+        dataAgendamento,
         preco,
         duracao,
         latitude,
         longitude,
         pets,
-        hora_inicio,
-        hora_termino
-
+        horaInicio,
+        horaTermino
       });
     } catch (error: any) {
       throw new Error(error.sqlMessage || error.message);
@@ -114,17 +97,6 @@ export class DogWalkBusiness {
     try {
 
       return await new DogWalkDatabase().finishWalk(walk);
-
-    } catch (error: any) {
-      throw new Error(error.sqlMessage || error.message);
-    }
-  }
-  
-
-  public allWalking = async (walk: walk) => {
-    try {
-
-      return await new DogWalkDatabase().allWalk(walk);
 
     } catch (error: any) {
       throw new Error(error.sqlMessage || error.message);

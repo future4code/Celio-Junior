@@ -6,20 +6,18 @@ export class DogWalkDatabase extends BaseDatabase {
    
    public insertWalk = async(walking: walk) => {
       try {
-         
         await this.getConnection()
         .insert({
             id: walking.id,
             status: walking.Status,
-            data_agendamento: walking.data_agendamento,
+            data_agendamento: walking.dataAgendamento,
             preco: walking.preco,
             duracao: walking.duracao,
             latitude: walking.latitude,
             longitude: walking.longitude,
             pets: walking.pets,
-            hora_inicio: walking.hora_inicio,
-            hora_termino: walking.hora_termino
-
+            hora_inicio: walking.horaInicio,
+            hora_termino: walking.horaTermino
          }).into(DogWalkDatabase.TABLE_NAME);
 
       } catch (error:any) {
@@ -73,26 +71,5 @@ public finishWalk = async(walking: walk) => {
    } catch (error:any) {
      throw new Error(error.sqlMessage || error.message);
    }
-}
-
-
-public allWalk = async(config: any) => {
-  try {
-   const data = new Date();
-   const dia = data.getDate()
-   const mes = data.getMonth()
-   const ano = data.getFullYear()
-
-     const result = await this.getConnection()
-     .select("*")
-     .where('data_agendamento', '>=',ano-mes-dia)
-     .orderBy(config.sort, config.order)
-     .limit(config.size)
-     .offset(config.offset).from(DogWalkDatabase.TABLE_NAME);
-     return result;
-
-   } catch (error:any) {
-     throw new Error(error.sqlMessage || error.message);
-   }
- }
+  }
 }
