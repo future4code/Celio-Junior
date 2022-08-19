@@ -10,3 +10,8 @@ CREATE TABLE IF NOT EXISTS Dog_Walking  (
   hora_inicio TIME NOT NULL,
   hora_termino TIME NOT	NULL
 );
+
+
+
+SELECT * FROM Dog_Walking
+WHERE data_agendamento = "2022-08-16"

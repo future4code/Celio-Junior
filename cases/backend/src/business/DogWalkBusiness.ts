@@ -102,4 +102,17 @@ export class DogWalkBusiness {
       throw new Error(error.sqlMessage || error.message);
     }
   }
+
+
+  public allWalking = async () => {
+    try {
+
+      let walkDogDB = await new DogWalkDatabase().allWalk();
+
+      return walkDogDB
+      
+    } catch (error: any) {
+      throw new Error(error.sqlMessage || error.message);
+    }
+  }
 }

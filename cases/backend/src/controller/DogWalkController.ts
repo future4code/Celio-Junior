@@ -23,7 +23,7 @@ export class DogWalkController {
          const { dataAgendamento, duracao, latitude, longitude, pets, horaInicio, horaTermino } = req.body
 
          const input: WalkInputDTO = {
-          dataAgendamento, 
+            dataAgendamento, 
             duracao, 
             latitude, 
             longitude, 
@@ -80,5 +80,17 @@ export class DogWalkController {
       } catch (error:any) {
          res.send({ message: error.message }).status(error.sqlMessage || error.message);
      }
+   }
+
+
+   public allWalk = async (req: Request, res: Response) => {
+      try {
+         
+         const data = await new DogWalkBusiness().allWalking()
+         
+         res.send(data).status(200);
+      } catch (error:any) {
+         res.send({ message: error.message }).status(error.sqlMessage || error.message);
+      }
    }
 }
