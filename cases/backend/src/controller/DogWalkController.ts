@@ -47,7 +47,7 @@ export class DogWalkController {
            id: req.params.id,
        }
 
-       const duracao = await new DogWalkDatabase().showWalk(input);
+       const duracao = await new DogWalkBusiness().showWalking(input);
 
        res.send(duracao).status(200);
       } catch (error:any) {
@@ -61,7 +61,7 @@ export class DogWalkController {
            id: req.params.id,
        }
         
-       const inicio = await new DogWalkDatabase().startWalk(input);
+       const inicio = await new DogWalkBusiness().startWalking(input);
 
        res.send(inicio).status(200);
       } catch (error:any) {
@@ -74,7 +74,7 @@ export class DogWalkController {
        const input:any = {
            id: req.params.id,
        }
-         const termino = await new DogWalkDatabase().finishWalk(input);
+         const termino = await new DogWalkBusiness().finishWalking(input);
 
          res.send(termino).status(200);
       } catch (error:any) {
