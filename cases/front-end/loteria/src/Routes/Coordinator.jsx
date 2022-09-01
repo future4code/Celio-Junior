@@ -1,23 +1,24 @@
-export const goToDiaDeSorte = (history) => {
-    history.push("/diadesorte")
+export function goToMega (history) {
+    history("/")
 }
 
-export const goToLotoFacil = (history) => {
-    history.push("/lotofacil")
+export function goToQuina (history) {
+    history("/quina")
 }
 
-export const goToLotoMania = (history) => {
-    history.push("/lotomania")
+export function goToLotoFacil (history) {
+    history("/lotofacil")
 }
 
-export const goToMega = (history) => {
-    history.push("/")
+export function goToLotoMania (history) {
+    history("/lotomania")
 }
 
-export const goToQuina = (history) => {
-    history.push("/quina")
+export function goToTimeMania (history) {
+    history("/timemania")
 }
 
-export const goToTimeMania = (history) => {
-    history.push("/timemania")
+export function goToDiaDeSorte (history) {
+    history("/diadesorte")
 }
+

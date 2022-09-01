@@ -5,7 +5,7 @@ export const List = styled.li`
   border-radius: 50%;
   padding: 1.5em;
   margin: 20px;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: 600;
   display: flex;
   justify-content: center;

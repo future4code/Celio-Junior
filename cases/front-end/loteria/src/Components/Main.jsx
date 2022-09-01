@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom"
 
 const Main = ({data}) => {
 
-    const navigate = useNavigate()
-
+    const history = useNavigate()
+    
     const onChange = (event) => {
-        navigate.push(event.target.value)
+        history(event.target.value)
     }
 
     return (

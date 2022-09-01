@@ -20,7 +20,6 @@ export const LeftCol = styled.div`
   color: #fff;
   bottom: 0;
   left: 0;
-  /* width: 300px; */
   height: 100vh;
   background: ${megaColor};
   z-index: 0;

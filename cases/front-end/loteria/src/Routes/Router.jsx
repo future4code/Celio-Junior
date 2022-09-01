@@ -12,33 +12,19 @@ const Router = () => {
 
     return (
             <Routes>
-                <Route exact path="/lotofacil">
-                    <LotoFacil />
-                </Route>
+                <Route path="/" element={<MegaSena/>}/>
 
-                <Route exact path="/lotomania">
-                    <LotoMania />
-                </Route>
+                <Route path="/lotofacil" element={<LotoFacil/>}/>
 
-                <Route exact path="/">
-                    <MegaSena />
-                </Route>
+                <Route path="/lotomania" element={<LotoMania/>}/>        
 
-                <Route exact path="/quina">
-                    <Quina />
-                </Route>
-
-                <Route exact path="/timemania">
-                    <TimeMania />
-                </Route>
-
-                <Route exact path="/diadesorte">
-                    <DiaDeSorte />
-                </Route>
-
-                <Route>
-                    <Error />
-                </Route>
+                <Route path="/quina" element={<Quina/>}/>
+                    
+                <Route path="/timemania" element={<TimeMania/>}/>
+                    
+                <Route path="/diadesorte" element={<DiaDeSorte/>}/>
+                    
+                <Route element={<Error/>}/>
             </Routes>
     )
 }
