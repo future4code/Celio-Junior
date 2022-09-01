@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Lista = styled.li`
+export const List = styled.li`
   background-color: #fff;
   border-radius: 50%;
   padding: 1.5em;
@@ -10,7 +10,7 @@ export const Lista = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media screen and (max-width: 900px) {
-    padding: 1em;
-  }
+    @media screen and (max-width: 900px) {
+      padding: 1em;
+    }
 `
